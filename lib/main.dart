@@ -82,13 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
       _output = _output + buttonText;
     }
 
-    print(_output);
-
     setState(() {
       output = double.parse(_output).toStringAsFixed(2);
     });
     var a = output.split('.');
-    print(a[1]);
     if (a[1] == '00') {
       setState(() {
         output = int.parse(_output).toString();
